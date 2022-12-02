@@ -21,10 +21,10 @@ Vehicule::Vehicule(int vitesseMax, int nbPlaces, int occupants){
 
 void Vehicule::demarrer(){
 	if (this->etat_ == MARCHE){
-		throw string ("Vehicule deja en fonctionnement");
+		throw invalid_argument ("Vehicule deja en fonctionnement");
 	}
 	if (this->etat_ == PANNE_LEGERE || this->etat_ == PANNE_SEVERE){
-			throw string ("Vehicule en panne");
+        throw invalid_argument ("Vehicule en panne");
 	}
     this->etat_ = MARCHE;
     this->vitesse_ += 1;
@@ -42,10 +42,10 @@ void Vehicule::depanner(){
 
 void Vehicule::accelerer(int increment){
 	if((this->vitesse_ + increment)>this->vitesseMax_){
-		throw string("Vitesse maximum depassee");
+		throw invalid_argument("Vitesse maximum depassee");
 	}
 	if((this->vitesse_ + increment) < 0){
-		throw string("Deceleration trop importante");
+		throw invalid_argument("Deceleration trop importante");
 	}
 	this->vitesse_ += increment;
 
@@ -54,14 +54,14 @@ void Vehicule::accelerer(int increment){
 void Vehicule::monter(int nbOcc){
 
 	if((this->occupants_ + nbOcc)>this->nbPlaces_){
-			throw string("Places insuffisantes");
+        throw invalid_argument("Places insuffisantes");
 	}
 	this->occupants_ += nbOcc;
 }
 
 void Vehicule::descendre(int nbOcc){
 	if((this->occupants_ + nbOcc)<0){
-				throw string("Plus personne dans la voiture");
+        throw invalid_argument("Plus personne dans la voiture");
 	}
     this->occupants_ -= nbOcc;
 }
