@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "Vehicule.hpp"
+#include "Voiture.hpp"
 
 using namespace std;
 
@@ -36,6 +37,9 @@ int main() {
     } catch (invalid_argument const& ex){
         cout << "#5:" << ex.what() << endl;
     }
+
+    Voiture fefe(50, 5, 0);
+    cout << fefe.getEtat() << endl;
     return 0;
 
 }
