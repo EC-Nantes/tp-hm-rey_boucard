@@ -39,6 +39,7 @@ int main() {
     }
 
     Voiture fefe(50, 5, 0);
+    fefe.demarrer();
     cout << fefe.getEtat() << endl;
     return 0;
 

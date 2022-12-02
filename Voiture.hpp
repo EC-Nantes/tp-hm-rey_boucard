@@ -18,6 +18,8 @@ class Voiture : public Vehicule
 {
 public:
     Voiture(int _vitesseMax=0, int _nbPlaces=1, int _occupants=0);
+    void demarrer();
+    void arreter();
 };
 
 #endif /* Voiture_hpp */
