@@ -60,7 +60,7 @@ void Vehicule::monter(int nbOcc){
 }
 
 void Vehicule::descendre(int nbOcc){
-	if((this->occupants_ + nbOcc)<0){
+	if((this->occupants_ - nbOcc)<0){
         throw invalid_argument("Plus personne dans la voiture");
 	}
     this->occupants_ -= nbOcc;
