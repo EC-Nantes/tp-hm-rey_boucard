@@ -1,6 +1,6 @@
-OBJS	= main.o Vehicule.o Voiture.o Bateau.o
-SOURCE	= main.cpp Vehicule.cpp Voiture.cpp Bateau.cpp
-HEADER	= Vehicule.hpp Voiture.hpp Bateau.hpp
+OBJS	= main.o Vehicule.o Voiture.o Bateau.o VoitureAmphibie.o
+SOURCE	= main.cpp Vehicule.cpp Voiture.cpp Bateau.cpp VoitureAmphibie.cpp
+HEADER	= Vehicule.hpp Voiture.hpp Bateau.hpp VoitureAmphibie.hpp
 OUT	= projectCPP
 CC	 = g++
 FLAGS	 = -g -c -Wall
@@ -20,6 +20,9 @@ Voiture.o: Voiture.cpp
 
 Bateau.o: Bateau.cpp
 	$(CC) $(FLAGS) Bateau.cpp -std=c11
+
+VoitureAmphibie.o: VoitureAmphibie.cpp
+	$(CC) $(FLAGS) VoitureAmphibie.cpp -std=c11
 
 clean:
 	rm -f $(OBJS) $(OUT)
