@@ -1,6 +1,6 @@
 OBJS	= main.o 
 SOURCE	= main.cpp 
-HEADER	= 
+HEADER	= Vehicule.hpp
 OUT	= projectCPP
 CC	 = g++
 FLAGS	 = -g -c -Wall
