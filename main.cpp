@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "Vehicule.hpp"
 #include "Voiture.hpp"
+#include "Bateau.hpp"
 
 using namespace std;
 
@@ -40,6 +41,17 @@ int main() {
 
     Voiture fefe(50, 5, 0);
     fefe.demarrer();
+    cout << fefe.getEtat() << endl;
+    Bateau yacht(50, 5, 0);
+    yacht.demarrer();
+    cout << yacht.getEtat() << endl;
+    
+    yacht.arreter();
+    cout << yacht.getEtat() << endl;
+    
+    yacht.mettreEnPanne(0.2);
+    cout << yacht.getEtat() << endl;
+    fefe.mettreEnPanne(0.8);
     cout << fefe.getEtat() << endl;
     return 0;
 

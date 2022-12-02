@@ -2,8 +2,6 @@
 //  Vehicule.hpp
 //  TP_HM_Exc
 //
-//  Created by Myriam Servières on 28/11/2021.
-//
 
 #ifndef Vehicule_hpp
 #define Vehicule_hpp
