@@ -12,7 +12,7 @@
 
 using namespace std;
 
-class Bateau : public virtual Vehicule
+class Bateau : public Vehicule
 {
 public:
     Bateau(int _vitesseMax=0, int _nbPlaces=1, int _occupants=0);

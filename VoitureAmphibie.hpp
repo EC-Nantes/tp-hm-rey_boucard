@@ -17,8 +17,6 @@ class VoitureAmphibie : public Voiture, public Bateau
 {
 public:
     VoitureAmphibie(int _vitesseMax=0, int _nbPlaces=1, int _occupants=0);
-    void demarrer();
-    void arreter();
 };
 
 #endif /* VoitureAmphibie_hpp */
