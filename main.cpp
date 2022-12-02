@@ -1,9 +1,15 @@
 #include <stdio.h>
+#include "Vehicule.hpp"
+
+using namespace std;
 
 int main() {
 
-   printf("Hello, World!");
+    printf("Hello, World!\n");
 
-   return 0;
-   
+    Vehicule car(20, 5, 1);
+    //car.accelerer(25);
+    cout << car.getEtat() << endl;
+    return 0;
+
 }
